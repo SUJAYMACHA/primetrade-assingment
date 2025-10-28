@@ -35,9 +35,9 @@ export default function Input({
           className={`
             w-full px-4 py-3 ${Icon ? 'pl-11' : ''} ${isPassword ? 'pr-11' : ''}
             border rounded-lg 
-            text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400
-            bg-white dark:bg-gray-700
-            focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent
+            text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500
+            bg-gray-50 dark:bg-gray-700
+            focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent focus:bg-white dark:focus:bg-gray-600
             transition-all duration-200
             ${error ? 'border-red-500 bg-red-50 dark:bg-red-900/20' : isFocused ? 'border-primary-500' : 'border-gray-300 dark:border-gray-600'}
             ${props.disabled ? 'bg-gray-100 dark:bg-gray-800 cursor-not-allowed' : ''}
