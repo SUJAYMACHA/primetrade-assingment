@@ -17,13 +17,13 @@ export default function Input({
   return (
     <div className="mb-4">
       {label && (
-        <label className="block text-gray-700 dark:text-gray-300 text-sm font-medium mb-2">
+        <label className="block  text-sm font-semibold mb-2">
           {label}
         </label>
       )}
       <div className="relative">
         {Icon && (
-          <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500">
+          <div className="absolute left-3 top-1/2 transform -translate-y-1/2 ">
             <Icon size={20} />
           </div>
         )}
@@ -32,15 +32,18 @@ export default function Input({
           type={inputType}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
+          style={{
+            backgroundColor: '#ffffff',
+            color: '#111827',
+            borderColor: error ? '#ef4444' : isFocused ? '#3b82f6' : '#d1d5db',
+          }}
           className={`
             w-full px-4 py-3 ${Icon ? 'pl-11' : ''} ${isPassword ? 'pr-11' : ''}
-            border rounded-lg 
-            text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500
-            bg-gray-50 dark:bg-gray-700
-            focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent focus:bg-white dark:focus:bg-gray-600
+            border-2 rounded-lg 
+            placeholder-gray-500
+            focus:outline-none focus:ring-2 focus:ring-blue-500
             transition-all duration-200
-            ${error ? 'border-red-500 bg-red-50 dark:bg-red-900/20' : isFocused ? 'border-primary-500' : 'border-gray-300 dark:border-gray-600'}
-            ${props.disabled ? 'bg-gray-100 dark:bg-gray-800 cursor-not-allowed' : ''}
+            ${props.disabled ? 'opacity-60 cursor-not-allowed' : ''}
           `}
         />
         {isPassword && (

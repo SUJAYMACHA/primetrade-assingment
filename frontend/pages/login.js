@@ -170,16 +170,6 @@ export default function Login() {
               </p>
             </div>
           </div>
-
-          {/* Demo Credentials */}
-          <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
-            <p className="text-sm text-blue-800 font-medium mb-2">
-              🎯 Demo Credentials (after registration):
-            </p>
-            <p className="text-xs text-blue-700">
-              Use the registration form to create your account first!
-            </p>
-          </div>
         </div>
       </div>
     </>
