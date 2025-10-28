@@ -1,10 +1,22 @@
 # PrimeTrade Assignment Submission
 
 ## Candidate Information
-- **Name**: [Your Full Name]
-- **Email**: [Your Email]
+- **Name**: Sujay Macha
+- **Email**: sujaymachawork@gmail.com
 - **Position**: Frontend Developer Intern
 - **Submission Date**: October 28, 2025
+
+## 🌐 Live Deployment URLs
+
+- **🚀 Frontend Application**: https://primetrade-assingment.vercel.app
+- **⚡ Backend API**: https://primetrade-backend-h5n6.onrender.com
+- **📦 GitHub Repository**: https://github.com/SUJAYMACHA/primetrade-assingment
+
+### Test the Application:
+1. Visit the frontend URL above
+2. Register a new account or login
+3. Create tasks, toggle dark mode, explore features
+4. API health check: https://primetrade-backend-h5n6.onrender.com/api/health
 
 ## Project Overview
 
