@@ -10,7 +10,7 @@ Build: npm install
 Start: npm start
 
 Environment Variables:
-- MONGODB_URI=mongodb+srv://sujaymachawork_db_user:Primetrade123@cluster0.vcdqgxk.mongodb.net/primetrade
+- MONGODB_URI=mongodb+srv://YOUR_DB_USER:YOUR_PASSWORD@cluster0.vcdqgxk.mongodb.net/primetrade
 - JWT_SECRET=primetrade_super_secret_jwt_key_2024_production
 - JWT_EXPIRE=30d
 - NODE_ENV=production
