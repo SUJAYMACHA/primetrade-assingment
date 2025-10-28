@@ -148,12 +148,16 @@ export default function TaskModal({ task, onClose }) {
               value={formData.description}
               onChange={handleChange}
               rows="4"
+              style={{
+                backgroundColor: '#ffffff',
+                color: '#111827',
+                borderColor: errors.description ? '#ef4444' : '#d1d5db',
+              }}
               className={`
                 w-full px-4 py-3 border rounded-lg
-                text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 bg-white dark:bg-gray-700
+                placeholder-gray-500
                 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent
                 transition-all duration-200
-                ${errors.description ? 'border-red-500 bg-red-50 dark:bg-red-900/20' : 'border-gray-300 dark:border-gray-600'}
               `}
             />
             {errors.description && (
@@ -170,7 +174,12 @@ export default function TaskModal({ task, onClose }) {
                 name="status"
                 value={formData.status}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white cursor-pointer"
+                style={{
+                  backgroundColor: '#ffffff',
+                  color: '#111827',
+                  borderColor: '#d1d5db',
+                }}
+                className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 cursor-pointer"
               >
                 <option value="pending">Pending</option>
                 <option value="in-progress">In Progress</option>
@@ -186,7 +195,12 @@ export default function TaskModal({ task, onClose }) {
                 name="priority"
                 value={formData.priority}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white cursor-pointer"
+                style={{
+                  backgroundColor: '#ffffff',
+                  color: '#111827',
+                  borderColor: '#d1d5db',
+                }}
+                className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 cursor-pointer"
               >
                 <option value="low">Low</option>
                 <option value="medium">Medium</option>
