@@ -15,9 +15,23 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? ['https://primetrade-assingment.vercel.app', 'http://localhost:3000']
-    : 'http://localhost:3000',
+  origin: function(origin, callback) {
+    // Allow requests with no origin (like mobile apps or Postman)
+    if (!origin) return callback(null, true);
+    
+    // Allow localhost and all Vercel deployment URLs
+    const allowedOrigins = [
+      'http://localhost:3000',
+      'https://primetrade-assingment.vercel.app',
+    ];
+    
+    // Allow any Vercel preview/deployment URL
+    if (origin.includes('vercel.app') || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    
+    callback(new Error('Not allowed by CORS'));
+  },
   credentials: true
 }));
 app.use(express.json());
